@@ -1,0 +1,38 @@
+{
+  "env": {
+    "commonjs": true,
+    "node": true
+  },
+  "extends": ["react-app", "plugin:react/recommended", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": ["react", "react-hooks"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "import/no-anonymous-default-export": [
+      "error",
+      {
+        "allowArray": true,
+        "allowArrowFunction": true,
+        "allowAnonymousClass": true,
+        "allowAnonymousFunction": true,
+        "allowCallExpression": true, // The true value here is for backward compatibility
+        "allowLiteral": true,
+        "allowObject": true
+      }
+    ],
+    "no-console": "warn"
+  }
+}
